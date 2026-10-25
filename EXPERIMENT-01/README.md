@@ -82,3 +82,44 @@ Important Notes
 Result
 
 Oracle VirtualBox was configured, and Ubuntu Linux was installed in a virtual machine. The installation was verified using basic Linux commands.
+Commands
+
+1. Display Linux system information
+
+uname -a
+
+2. Display Ubuntu version and details
+
+cat /etc/os-release
+
+3. Display current date and time
+
+date
+
+4. Display the current logged-in user
+
+whoami
+
+5. Display the current working directory
+
+pwd
+
+6. Display CPU information
+
+lscpu
+
+7. Display memory usage
+
+free -h
+
+8. Display disk space
+
+df -h
+
+9. Display IP address information
+
+ip addr
+
+10. Display the Ubuntu kernel version
+
+uname -r
