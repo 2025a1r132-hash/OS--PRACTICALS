@@ -1,0 +1,40 @@
+PROGRAM 1: IDENTIFY PATH
+
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <path>"
+    exit 1
+fi
+
+path="$1"
+
+if [ -f "$path" ]; then
+    echo "Regular file"
+elif [ -d "$path" ]; then
+    echo "Directory"
+elif [ -L "$path" ]; then
+    echo "Symbolic link"
+else
+    echo "Path does not exist"
+fi
+
+
+PROGRAM 2: FILE MANIPULATOR
+
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+    echo "Usage: $0 <source_file> <destination_file>"
+    exit 1
+fi
+
+source="$1"
+destination="$2"
+
+if [ -f "$source" ]; then
+    cp -- "$source" "$destination"
+    echo "File copied successfully."
+else
+    echo "Source file does not exist."
+fi
